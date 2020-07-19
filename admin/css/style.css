@@ -1,0 +1,16 @@
+body{
+    background: #343a40ed;
+}
+.navbar-dark .navbar-nav .nav-link {    
+    color: #fff;
+}
+.siderbarMenu{
+    min-height: 440px;
+    overflow-y: scroll;
+}
+.siderbarMenu a{
+    color: #fff;
+}
+.siderbarMenu a:hover{
+    border-bottom: 1px solid #f0f0f0;
+}
