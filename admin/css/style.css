@@ -1,11 +1,33 @@
 body{
     background: #343a40ed;
 }
+a{
+    text-decoration: none;
+}
+a:focus{
+    outline: none;
+}
+.nav_sel{
+    background-color: #17A366!important;
+}
+.hd_top{
+    background: #204562;
+}
 .navbar-dark .navbar-nav .nav-link {    
     color: #fff;
 }
+.show_item{
+    padding: 5px 0px 5px 10px;
+}
+.main_content_filder{
+    padding: 10px 0px 10px 25px;
+}
+.form-select, .md-form, .fld_btn{
+    width: 90%;
+}
 .siderbarMenu{
     min-height: 440px;
+    height: auto;
 }
 .siderbarMenu a{
     color: #fff;
@@ -16,4 +38,16 @@ body{
 .content_body{
     background: #f2f2f2;
     min-height: 385px;
+}
+.main_body{
+    background-color: #0D6E96!important;
+}
+/* override sidebar-menu */
+.dropdown-item {
+    min-width: 218px;
+}    
+
+.tpbtn{
+    margin: 15px 0 20px 0;
+    width: 150px;
 }
