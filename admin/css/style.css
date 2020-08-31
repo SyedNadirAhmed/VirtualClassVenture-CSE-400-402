@@ -22,11 +22,11 @@ a:focus{
 .main_content_filder{
     padding: 10px 0px 10px 25px;
 }
-.form-select, .md-form, .fld_btn{
+.form-select, .form-control, .md-form, .fld_btn{
     width: 90%;
 }
 .siderbarMenu{
-    min-height: 440px;
+    min-height: 488px;
     height: auto;
 }
 .siderbarMenu a{

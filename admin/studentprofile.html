@@ -15,7 +15,7 @@
   <body>
     <div class="container-fluid">
 
-      <!-- Header top for admin start -->
+    <!-- Header top for admin start -->
       <div class="row">
         <div class="col-md-12 hd_top">
           <div class="col-md-4 d-inline-block">
@@ -37,7 +37,7 @@
 
       <!-- Nav Section Start -->
         <div class="row">
-                <nav class="nav_sel navbar navbar-expand-lg navbar-dark">
+                <nav class="nav_sel navbar navbar-expand-lg navbar-dark bg-info">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -74,38 +74,37 @@
 
                 <ul class="siderbarMenu nav flex-column bg-dark">
 
-                      <li class="nav-item">
-                        <a class="nav-link" href="todaysclasses.html" role="button" aria-expanded="false">Today's Classes</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="todaysclasses.html" role="button" aria-expanded="false">Today's Classes</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="totalclassbyteacher.html" role="button" aria-expanded="false">Total class</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link"href="teacherprofile.html" role="button" aria-expanded="false">Teacher Profile</a>
                       </li>
 
-                        <li class="nav-item">
-                          <a class="nav-link" href="totalclassbyteacher.html" role="button" aria-expanded="false">Total class</a>
-                        </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="studentprofile.html" role="button" aria-expanded="false">Student Profile</a>
+                    </li>
 
-                        <li class="nav-item">
-                          <a class="nav-link"href="teacherprofile.html" role="button" aria-expanded="false">Teacher Profile</a>
-                          </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" role="button" aria-expanded="false">Pages</a>
+                    </li>
 
-                        <li class="nav-item">
-                          <a class="nav-link" href="studentprofile.html" role="button" aria-expanded="false">Student Profile</a>
-                        </li>
-
-                        <li class="nav-item">
-                          <a class="nav-link" href="#" role="button" aria-expanded="false">Pages</a>
-                        </li>
-
-                        <li class="nav-item">
-                          <a class="nav-link"href="#" role="button" aria-expanded="false">Settings</a>
-                        </li>
-                  </ul>  
+                    <li class="nav-item">
+                      <a class="nav-link"href="#" role="button" aria-expanded="false">Settings</a>
+                    </li>
+                </ul>  
               </div>
               <!-- End sidebarMenu Options -->
 
               <!-- Main Content Start -->
               <div class="col-md-10 float-right">
                 <div class="main_body ml-2">
-                  <h2 class="bg-gradient p-2 mb-0 text-light text-center">Today's Classes</h2>
-
+                  <h2 class="bg-gradient p-2 mb-0 text-white text-center">Student Profile</h2>
                   <div class="show_item col-md-12 bg-light">
                     <div class="col-md-1">
                       <select class="form-select" aria-label="Default select example">
@@ -118,7 +117,7 @@
                     </div>
                   </div>
 
-                  <div class="main_content_filder col-md-12 input-group border border-info bg-dark bg-gradient">
+                  <div class="main_content_filder col-md-12 input-group border border-info bg-dark  bg-gradient">
                       <div class="col-md-3">
                         <select class="form-select" aria-label="Default select example">
                           <option selected>Department</option>
@@ -130,76 +129,39 @@
                         </select>
                       </div>
                       <div class="col-md-3">
-                        <select class="form-select" aria-label="Default select example">
-                          <option selected>Teacher</option>
-                          <option value="1">MLR</option>
-                          <option value="2">BCB</option>
-                          <option value="3">SHP</option>
-                          <option value="4">NS</option>
-                          <option value="5">SC</option>
-                        </select>
+                        <input class="form-control" type="text" placeholder="Session" aria-label="deafult input example">
                       </div>
                       <div class="col-md-3">
-                        <div class="md-form md-outline input-with-post-icon datepicker">
-                          <input type="date" id="example" class="form-control">
-                        </div>
+                        <input class="form-control" type="text" placeholder="Student Registration No." aria-label="deafult input example">
                       </div>
                       <div class="col-md-3">
                         <button type="button" class="fld_btn btn btn-danger btn-md btn-block">Check</button>
                       </div>
                   </div>
                   <div class="content_body">
-                    <!-- <h3 class="text-center">Department Of CSE</h3> -->
-                    <table class="table table-info table-striped text-center">
+                    <table class="table table-info table-striped">
                       <thead>
                         <tr>
                           <th scope="col">SL</th>
-                          <th scope="col">Semester No.</th>
-                          <th scope="col">Course Code</th>
-                          <th scope="col">Course Title</th>
-                          <th scope="col">Course Teacher</th>
-                          <th scope="col">Class Time</th>
-                          <th scope="col">Participate Students</th>
-                          <th scope="col">Status</th>
-                          <th scope="col">Action</th>
+                          <th scope="col">Session</th>
+                          <th scope="col">Registration No.</th>
+                          <th scope="col">Semester</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Details</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <th scope="row">1</th>
-                          <th >11th</th>
-                          <td>CSE-400</td>
-                          <td>Thesis/Project I</td>
-                          <td>MLR</td>
-                          <td>8.00pm</td>
-                          <td><a href="participatelist.html">See participate list</a></td>
-                          <td>Running || End</td>
-                          <td>Checked || Delete</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <th >11th</th>
-                          <td>CSE-400</td>
-                          <td>Thesis/Project I</td>
-                          <td>MLR</td>
-                          <td>8.00pm</td>
-                          <td><a href="participatelist.html">See participate list</a></td>
-                          <td>Running || End</td>
-                          <td>Checked || Delete</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <th >11th</th>
-                          <td>CSE-400</td>
-                          <td>Thesis/Project I</td>
-                          <td>MLR</td>
-                          <td>8.00pm</td>
-                          <td><a href="participatelist.html">See participate list</a></td>
-                          <td>Running || End</td>
-                          <td>Checked || Delete</td>
+                          <th>Spring-17</th>
+                          <td>170103020000</td>
+                          <td>11th</td>
+                          <td>XYZ...</td>
+                          <td><a href="studentprofiledetails.html">See more</a></td>
                         </tr>
                       </tbody>
                     </table>
+
                   </div>
                 </div>
               </div>

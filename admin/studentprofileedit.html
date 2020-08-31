@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -15,25 +15,25 @@
   <body>
     <div class="container-fluid">
 
-      <!-- Header top for admin start -->
-        <div class="row">
-          <div class="col-md-12 hd_top">
-            <div class="col-md-4 d-inline-block">
-              <h2 class="text-white font-weight-normal float-left">Project Title</h2>
-              <!-- <img class="" src="" alt="">logo -->
-            </div>
-            <div class="col-md-4 d-inline-block">
-              <h2 class="mt-0 text-center text-white">Admin panel</h2>
-            </div>
-            <div class="col-md-3 d-inline-block float-right">
-              <ul class="d-inline-flex float-right list-unstyled text-white">
-                <li class="p-1">Hello admin</li>
-                <li class="p-1">|| Logout</li>
-              </ul>
-            </div>
+    <!-- Header top for admin start -->
+       <div class="row">
+        <div class="col-md-12 hd_top">
+          <div class="col-md-4 d-inline-block">
+            <h2 class="text-white font-weight-normal float-left">Project Title</h2>
+            <!-- <img class="" src="" alt="">logo -->
+          </div>
+          <div class="col-md-4 d-inline-block">
+            <h2 class="mt-0 text-center text-white">Admin panel</h2>
+          </div>
+          <div class="col-md-3 d-inline-block float-right">
+            <ul class="d-inline-flex float-right list-unstyled text-white">
+              <li class="p-1">Hello admin</li>
+              <li class="p-1">|| Logout</li>
+            </ul>
           </div>
         </div>
-        <!-- End Header top for admin -->
+      </div>
+      <!-- End Header top for admin -->
 
       <!-- Nav Section Start -->
         <div class="row">
@@ -72,11 +72,11 @@
             <!-- Sidebar Menu options -->
               <div class="col-md-2 float-left">
 
-                  <ul class="siderbarMenu nav flex-column bg-dark">
+                <ul class="siderbarMenu nav flex-column bg-dark">
 
-                       <li class="nav-item">
-                          <a class="nav-link" href="todaysclasses.html" role="button" aria-expanded="false">Today's Classes</a>
-                        </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="todaysclasses.html" role="button" aria-expanded="false">Today's Classes</a>
+                    </li>
 
                         <li class="nav-item">
                           <a class="nav-link" href="totalclassbyteacher.html" role="button" aria-expanded="false">Total class</a>
@@ -84,7 +84,7 @@
 
                       <li class="nav-item">
                         <a class="nav-link"href="teacherprofile.html" role="button" aria-expanded="false">Teacher Profile</a>
-                       </li>
+                        </li>
 
                       <li class="nav-item">
                         <a class="nav-link" href="studentprofile.html" role="button" aria-expanded="false">Student Profile</a>
@@ -97,19 +97,41 @@
                       <li class="nav-item">
                         <a class="nav-link"href="#" role="button" aria-expanded="false">Settings</a>
                       </li>
-                    </ul>  
+                </ul>  
               </div>
               <!-- End sidebarMenu Options -->
 
               <!-- Main Content Start -->
               <div class="col-md-10 float-right">
                 <div class="main_body ml-2">
-                  <h2 class="bg-gradient p-2 mb-0 text-white text-center">Dashboard</h2>
+                  <h2 class="bg-gradient p-2 mb-0 text-white text-center">Student Profile</h2>
                   <div class="content_body pl-1">
-                      Welcome To Admin Panel
+                    <h3 class="text-center">Student Full Name</h3>
+                    <form class="pl-2 pr-3 tbdform ">
+                        <div class="mb-1">
+                            <label for="positon" class="form-label">Department</label>
+                            <input type="text" class="form-control" id="" aria-describedby="">
+                            
+                            <label for="positon" class="form-label">Session</label>
+                            <input type="text" class="form-control" id="" aria-describedby="">
+
+                            <label for="positon" class="form-label">Semester</label>
+                            <input type="text" class="form-control" id="" aria-describedby="">
+
+                            <label for="positon" class="form-label"> Registration No.</label>
+                            <input type="text" class="form-control" id="" aria-describedby="">
+
+                            <label for="positon" class="form-label"> Phone No.</label>
+                            <input type="text" class="form-control" id="" aria-describedby="">
+
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                            <button type="Edit" class="btn btn-success tpbtn"><a class="text-white" href="studentprofiledetails.html">Save</a></button>
+                      </form>
                   </div>
                 </div>
-              </div>
+                
               <!-- Main Content End -->
           </div>
         </div>
@@ -120,3 +142,4 @@
     <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>
+
