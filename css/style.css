@@ -1,0 +1,114 @@
+/* Nav Section */
+.rcl{
+    background-color: #23A8F2;
+}
+.rcl a{
+    color: #fff;
+}
+.rcl:hover{
+    background-color: #004d7a;
+    transition: 0.3s ease;
+   
+}
+.rcl a:hover{
+    color: #FFE7B8;
+    transition: 0.3s ease;
+}
+/* Nav section End */
+/* Teacher and Student Login section start */
+.tlf{
+    margin:6% 0 0 6%;
+    width: 40%;
+}
+.slf{
+    margin:6% 6% 0 0;
+    width: 40%;
+}
+.techerloginform, .studentloginform, .techerregform, .studentregform, input[type=text], input[type=password],input[type=date] {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+.tl_btn {
+    background: #008793;
+    transition: 0.3s linear;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+.tl_btn:hover{
+    background: #00bf72;
+  }
+.sub_sec{
+    background-color: #FFE7B8;
+}  
+span.fpsw {
+    float: right;
+  }
+.fpsw a{
+    text-decoration: none;
+    background-color: #7b11f8b5;
+    color: #1f1f1e;
+    padding: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.fpsw a:hover{
+    background-color:#004d7a;
+    color: #fff;
+    transition: 0.3s ease;
+}  
+/* Teacher and Student Login section end */
+
+/* Contact Us Page Start */
+.contact-us{
+    background-image: linear-gradient(to left, #051937, #004d7a, #008793, #00bf72);
+    margin: 5px 0px 0px 160px;
+    width: 75%;
+    box-shadow: 3px 3px 10px #000;
+}
+.contact-us .form-control{
+    border-radius:1rem;
+}
+.contact-us form{
+    padding: 6%;
+}
+.contact-us form .row{
+    margin-bottom: -8%;
+}
+.contact-us h2{
+    padding: 8px;
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    width: 90%;
+    background-color: #e0dfdf73;
+    color: #0f0f10d1;
+}
+.contact-us .btnContact {
+    display: block;
+    margin: 3% auto;
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1%;
+    background: #dc3545;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+}
+.contact-us .btnContact:hover{
+    background: #101416be;
+    transition: 0.3s ease;
+  }
+/* Contact Us Page End */
