@@ -1,3 +1,8 @@
+input{
+    outline: none;
+    box-shadow:none !important;
+}
+
 /* Nav Section */
 .rcl{
     background-color: #23A8F2;
@@ -33,17 +38,20 @@
     box-sizing: border-box;
   }
   
-.tl_btn {
+.tl_btn{
     background: #008793;
     transition: 0.3s linear;
-    color: white;
+    color: #fff;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
   }
-  
+  .tl_btn a{
+    text-decoration: none;
+    color: #fff;
+  } 
 .tl_btn:hover{
     background: #00bf72;
   }
@@ -55,11 +63,12 @@ span.fpsw {
   }
 .fpsw a{
     text-decoration: none;
-    background-color: #7b11f8b5;
-    color: #1f1f1e;
+    background-color: #fff;
+    color: #004d7a;
     padding: 10px;
     text-transform: capitalize;
     font-weight: bold;
+    border: 2px solid #004d7a;
 }
 .fpsw a:hover{
     background-color:#004d7a;
@@ -112,3 +121,60 @@ span.fpsw {
     transition: 0.3s ease;
   }
 /* Contact Us Page End */
+
+/* Teacher Profile Setup Page Start */
+.tpsbody{
+    background: #00bf72;
+    box-shadow: 3px 3px 10px #000;
+}
+.tpsbody h2{
+    margin: 10px 0;
+    background-color: #e0dfdf73;
+    color: #0f0f10d1;
+}
+.tpsbody label{
+    color: #F7F633;
+    font-size: 20px;
+}
+.tpsbtn{
+    background: #f5093cbe;
+    margin: 30px 0;
+    width: 90%;
+    transition: 0.3s ease;
+}
+.tpsbtn:hover{
+    border: 1px solid #000;
+    background: #004D7A;
+    transition: 0.3s ease;
+}
+.tpsbtn a{
+    text-decoration: none;
+    color: #000;
+    padding:5px;
+}
+.tpsbtn:hover a{
+    color: #fff;
+}
+
+/* Teacher Profile Setup Page End */
+
+/* Index page start */
+.main_nav{
+    background-color: #00496A;
+}
+.main_nav li{
+    padding: 5px 8px;
+}
+.main_nav a{
+    color: #fff;
+}
+.main_nav li:hover{
+    background-color: #ff1d58;
+    transition: 0.2s ease;
+}
+
+.card_sel{
+    width: 90%;
+    margin:10px 0px 10px 20px;
+}
+/* Index page end */

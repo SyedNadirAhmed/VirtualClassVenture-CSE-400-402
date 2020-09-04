@@ -14,14 +14,14 @@
     <title>Virtual Class Venture</title>
   </head>
   <body>
-
+    
   <div class="container-fluid">
     <!-- Header top start -->
       <div class="row">
         <div class="col-md-12 bg-dark mt-1">
           <ul class="nav bg-light p-2 justify-content-end">
             <li class="rcl nav-item mr-2 border border-info rounded-pill">
-              <a class="nav-link" href="login.html">Login</a>
+              <a class="nav-link" href="registration.html" target="_blank">Register</a>
             </li>
             <li class="rcl nav-item mr-2 border border-info rounded-pill">
               <a class="nav-link" href="contactus.html">Contact Us</a>
@@ -31,46 +31,53 @@
       </div>
       <!-- End Header top -->
 
-      <!-- Restration Form Start -->
+      <!-- Login Form Start -->
       <div class="row">
         <div class="col-md-12">
-          <!-- Teacher Restration From Start -->
+          <!-- Teacher Login From Start -->
           <div class="col-md-6 tlf  float-left d-block">
-            <div class="techerregform border border-secondary float-left">
-              <h2 class="text-center bg-light p-2">Teacher Registration</h2>
+            <div class="techerloginform border border-secondary float-left">
+              <h2 class="text-center bg-light p-2">Teacher Login</h2>
                 <form action="" method="post">
-
-                    <label for="name"><b>Name</b></label>
-                    <input type="password" placeholder="Enter Your Full Name" name="name" required>
-
-                    <label for="uname"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
+                  <label for="uname"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+              
+                  <label for="password"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="password" required>
                       
-                    <button class="tl_btn" type="submit"><a href="teacherprofilesetup.html">Next</a></button>
+                  <button class="tl_btn" type="submit">Login</button>
+                  <div class="sub_sec p-3">
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                    <span class="fpsw">Forgot <a href="#">password?</a></span>
+                  </div>  
                 </form>  
             </div>
           </div>
-          <!-- Teacher Restration From End -->
+          <!-- Teacher Login From End -->
 
-          <!-- Student Restration From Start -->
+          <!-- Student Login From Start -->
           <div class="col-md-6 slf float-right d-block">
-            <div class="studentregform border border-secondary float-right">
-              <h2 class="text-center bg-light p-2">Student Registration</h2>
+            <div class="studentloginform border border-secondary float-right">
+              <h2 class="text-center bg-light p-2">Student Login</h2>
                 <form action="" method="post">
                   <label for="registrationNo"><b>Registration No.</b></label>
                   <input type="text" placeholder="Enter Registration No." name="registrationno" required>
               
-                  <label for="birthday"><b>Birthday</b></label>
-                  <input type="date" id="example" class="form-control">
+                  <label for="password"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="password" required>
                       
-                  <button class="tl_btn" type="submit"><a href="studentprofilesetup.html">Next</a></button> 
+                  <button class="tl_btn" type="submit">Login</button>
+                  <div class="sub_sec p-3">
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                    <span class="fpsw">Forgot <a href="#">password?</a></span>
+                  </div>  
                 </form>  
             </div>
           </div>
-          <!-- Student Registration From End -->
+          <!-- Student Login From End -->
         </div>
       </div>
-      <!-- Registration From End -->
+      <!-- Login From End -->
   </div>
 
     <!-- Optional JavaScript -->
