@@ -172,9 +172,49 @@ span.fpsw {
     background-color: #ff1d58;
     transition: 0.2s ease;
 }
-
+.main_content_filder {
+    padding: 10px 0px 10px 30px;
+}
+.mcf_sel{
+    width: 32%;
+    margin: 0 5px;
+}
+.fld_btn{
+    color: #fff;
+    background-color: #051937;
+}
+.fld_btn:hover{
+    color: #00bf72
+} 
 .card_sel{
     width: 90%;
     margin:10px 0px 10px 20px;
 }
+.nroll_btn{
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.nroll_btn:hover{
+    color: #F7BE12;
+}
 /* Index page end */
+
+/* Class Page Start */
+.siderbarMenu{
+    min-height: 500px;
+    height: auto;
+}
+.siderbarMenu a{
+    color: #fff;
+    font-weight: 500;
+    border-bottom: 2px solid #f0f0f0;
+}
+.siderbarMenu a:hover{
+    background-color: #ff1d58;
+    transition: 0.2s ease;
+}
+
+/* Class Page End */
