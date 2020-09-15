@@ -218,3 +218,22 @@ span.fpsw {
 }
 
 /* Class Page End */
+
+/* Assignment Details Page start */
+.ass-p{
+    height: 50px;
+    padding: 10px;
+}
+.ass_right{
+    margin-left: 10px;
+    width: 30%;
+    min-height: 400px;
+    padding: 10px;
+}
+.form-file-text{
+    
+}
+.rg_btn{
+    width: 96%;
+}
+/* Assignment Details Page End */
