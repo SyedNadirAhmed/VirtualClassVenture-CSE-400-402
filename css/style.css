@@ -237,3 +237,17 @@ span.fpsw {
     width: 96%;
 }
 /* Assignment Details Page End */
+
+/* Student Video Files Page Start */
+.stembedvideo{
+    margin: 0 auto;
+    width: 50%;
+    min-height: 140px;
+    height: auto;
+    display: inline-block;
+}
+.stvideo{
+    width: 50%;
+    height: auto;
+}
+/* Student Video Files Page End */
