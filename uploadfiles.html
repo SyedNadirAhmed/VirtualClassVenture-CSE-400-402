@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Virtual Class Venture</title>
+  </head>
+  <body>
+    
+  <div class="container-fluid">
+    <!-- Header top start -->
+      <div class="row">
+        <div class=" col-md-12 mt-1">
+            <nav class="main_nav navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item ml-1">
+                          <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="joinclass.html">Join Class</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="enrolledclasses.html">Enrolled Classes</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="teaching.html">Teaching Classes</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="createclass.html">Create Class</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="login.html">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="contactus.html">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+
+            </nav>
+        </div>
+      </div>
+
+      <!-- End Header top -->
+
+      <!-- Content Start -->
+      <div class="row">
+        <div class="col-md-12 mt-1">
+            <div class="col-md-2 float-left">
+                  <!-- End sidebarMenu Options -->
+                <ul class="siderbarMenu nav flex-column bg-dark">
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="#" role="button" aria-expanded="false">Start Live Class</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link" href="createassignment.html" role="button" aria-expanded="false">Create Assignment</a>
+                      </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="uploadfiles.html" role="button" aria-expanded="false">Upload Files</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="uploadvideofiles.html" role="button" aria-expanded="false">Upload Video Files</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="makeexam.html" role="button" aria-expanded="false">Make Exam</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="participatelist.html" role="button" aria-expanded="false">See Students</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button" aria-expanded="false">Announcement</a>
+                    </li>
+                  </ul>  
+            </div>
+            <!-- End sidebarMenu Options -->
+
+              <!-- Main Content start -->
+
+            <div class="col-md-10 float-right">
+                <div class="createassment">
+                      <!-- Main Content Right Side Start-->
+                   <div class="col-md-12">
+                    <div class="col-md-8 uploadfiles_left float-left ml-2 border border-secondary p-3">  
+                        <p id="annt1">
+                            <script>
+                                var d = new Date();
+                                var day = d.getDay();
+                                var hr = d.getHours();
+                                var min = d.getMinutes();
+                                if (min < 10) {
+                                    min = "0" + min;
+                                }
+                                var ampm = "AM";
+                                if( hr > 12 ) {
+                                    hr -= 12;
+                                    ampm = "PM";
+                                }
+                                var date = d.getDate();
+                                var month = d.getMonth()+1;
+                                var year = d.getFullYear();
+                                var x = document.getElementById("time");
+                                document.getElementById("annt1").innerHTML = hr + ":" + min + ampm + " - " + date + "/" + month + "/" + year; 
+                            </script>
+                        </p> 
+
+                        <h3 class="border-bottom border-secondary p-1">Upload Files</h3>
+                        <h4>File Name</h4>
+                        <input type="text" class="form-control" placeholder="">
+                        <div class="form-file float-left mt-1 mb-2">
+                            <input type="file" class="form-file-input" id="customFile">
+                                <label class="form-file-label" for="customFile">
+                                <span class="form-file-text">Choose file...</span>
+                                <span class="form-file-button">Browse</span>
+                                </label>
+                        </div>
+                        <button href="#" type="button" class="btn btn-primary btn-sm btn-block">Upload</button>
+                    </div>
+                    <!-- Main Content Left Side End -->
+
+                    <!-- Main Content Right Side Start -->
+                    <div class="uploadfiles_right col-md-4 float-right border-left border-secondary">
+
+                        <h3>Uploaded Files</h3>
+                        
+                    </div>
+                    <!-- Main Content Left Side End -->
+                </div>
+
+            </div>      
+        </div>
+      </div>
+      <!-- Content End -->
+      
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

@@ -59,80 +59,80 @@
       <!-- Content Start -->
       <div class="row">
         <div class="col-md-12 mt-1">
-          <!-- Start sidebarMenu Options -->
             <div class="col-md-2 float-left">
-
+                  <!-- End sidebarMenu Options -->
                 <ul class="siderbarMenu nav flex-column bg-dark">
 
                      <li class="nav-item">
-                        <a class="nav-link" href="#" role="button" aria-expanded="false">Live Class</a>
+                        <a class="nav-link" href="#" role="button" aria-expanded="false">Start Live Class</a>
                       </li>
 
                       <li class="nav-item">
-                        <a class="nav-link" href="assignment.html" role="button" aria-expanded="false">Assignment</a>
+                        <a class="nav-link" href="createassignment.html" role="button" aria-expanded="false">Create Assignment</a>
                       </li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="studentfiles.html" role="button" aria-expanded="false">Files</a>
+                      <a class="nav-link" href="uploadfiles.html" role="button" aria-expanded="false">Upload Files</a>
                     </li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="studentvideofiles.html" role="button" aria-expanded="false">Video Files</a>
+                      <a class="nav-link" href="uploadvideofiles.html" role="button" aria-expanded="false">Upload Video Files</a>
                     </li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="exam.html" role="button" aria-expanded="false">Exam</a>
+                      <a class="nav-link" href="makeexam.html" role="button" aria-expanded="false">Make Exam</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="participatelist.html" role="button" aria-expanded="false">Students</a>
+                        <a class="nav-link" href="participatelist.html" role="button" aria-expanded="false">See Students</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="announcement.html" role="button" aria-expanded="false">Announcement</a>
+                        <a class="nav-link" href="#" role="button" aria-expanded="false">Announcement</a>
                     </li>
                   </ul>  
             </div>
             <!-- End sidebarMenu Options -->
 
-            <!-- Main Content start -->
+              <!-- Main Content start -->
 
             <div class="col-md-10 float-right">
-                <table class="table table-light text-center">
-                    <thead>
-                      <tr>
-                        <th scope="col">SL.</th>
-                        <th scope="col">Date & Time</th>
-                        <th scope="col">Play Video</th>
-                        <th scope="col">Download</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>01.01.20 - 9:10pm</td>
-                        <td>
-                            <div class="stembedvideo embed-responsive embed-responsive-21by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
-                            </div>
-                        </td>
-                        <td><a href="#">Download</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>01.01.20 - 9:10pm</td>
-                        <td>
-                            <video class="stvideo" controls>
-                                <source src="" type="video/mp4">
-                            </video> 
-                        </td>
-                        <td><a href="#">Download</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>
+                <div class="createassment">
+                      <!-- Main Content Right Side Start-->
+                   <div class="col-md-12">
+                    <div class="col-md-8 float-left pl-2">   
+                        <h3>Assignment Title</h3>
+                        <input type="text" class="form-control" placeholder="">
 
-            <!-- Main Content End -->
+                        <h3>Instruction</h3>
+                        <textarea class="form-control" id="#" rows="3"></textarea>
+
+                        <div class="form-file float-left mt-2">
+                            <input type="file" class="form-file-input" id="customFile">
+                                <label class="form-file-label" for="customFile">
+                                <span class="form-file-text">Choose file...</span>
+                                <span class="form-file-button">Browse</span>
+                                </label>
+                        </div>
+                    </div>
+                    <!-- Main Content Left Side End -->
+
+                    <!-- Main Content Right Side Start -->
+                    <div class="createass_right col-md-4 float-right border-left border-secondary">
+                        <h3>Marks</h3>
+                        <input type="text" class="form-control" placeholder="">
+
+                        <h3>Due</h3>
+                        <div class="md-form md-outline input-with-post-icon datepicker">
+                          <input type="date" id="example" class="form-control">
+                          <input type="time" id="example" class="form-control">
+                        </div>
+                    </div>
+                    <!-- Main Content Left Side End -->
+                    <button href="#" type="button" class="createassment_btn btn btn-primary btn-sm btn-block">Publish</button>
+                </div>
+
+            </div>      
         </div>
       </div>
       <!-- Content End -->
@@ -145,4 +145,3 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
-

@@ -227,7 +227,7 @@ span.fpsw {
 .ass_right{
     margin-left: 10px;
     width: 30%;
-    min-height: 400px;
+    min-height: 450px;
     padding: 10px;
 }
 .form-file-text{
@@ -251,3 +251,40 @@ span.fpsw {
     height: auto;
 }
 /* Student Video Files Page End */
+/* Exam Page Start */
+.stexam_btn{
+    margin: 10px auto;
+    width: 90%;
+}
+.stexam_btn:hover{
+    background-color: #ff1d58;
+    transition: 0.2s ease;
+}
+/* Exam Page End */
+
+/* Crate Assignment Page Start */
+.createass_right{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    min-height: 460px;
+    padding: 10px;
+}
+.createassment_btn{
+    margin: 20px auto;
+    width: 90%;
+}
+/* Crate Assignment Page End */
+
+/* Uploaded Files Page Start */
+.uploadfiles_left, .createassment, input[type=text], input[type=date]{
+    padding: 5px 10px;
+}
+.uploadfiles_right{
+    margin-left: 10px;
+    width: 30%;
+    min-height: 460px;
+    padding: 10px;
+}
+
+/* Uploaded Files Page End */

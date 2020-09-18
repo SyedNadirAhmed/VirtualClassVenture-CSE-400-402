@@ -98,38 +98,47 @@
             <!-- Main Content start -->
 
             <div class="col-md-10 float-right">
-                <table class="table table-light text-center">
-                    <thead>
-                      <tr>
-                        <th scope="col">SL.</th>
-                        <th scope="col">Date & Time</th>
-                        <th scope="col">Play Video</th>
-                        <th scope="col">Download</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>01.01.20 - 9:10pm</td>
-                        <td>
-                            <div class="stembedvideo embed-responsive embed-responsive-21by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
-                            </div>
-                        </td>
-                        <td><a href="#">Download</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>01.01.20 - 9:10pm</td>
-                        <td>
-                            <video class="stvideo" controls>
-                                <source src="" type="video/mp4">
-                            </video> 
-                        </td>
-                        <td><a href="#">Download</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <div class=" p-2 annment border border-secondary bg-info text-light" >
+                        <div class="annment">
+                            <p class="ml-2" id="annt1">
+                                <script>
+                                    var today = new Date();
+                                    var dd = today.getDate();
+        
+                                    var mm = today.getMonth()+1; 
+                                    var yyyy = today.getFullYear();
+        
+                                    today = dd+'/'+mm+'/'+yyyy;
+                                    document.getElementById("annt1").innerHTML = today;
+                                </script>
+                            </p>
+
+                            <p class="justify-content border-bottom border-secondary p-1" >
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                            <!-- <img src="" alt=""> -->
+                        </div>
+
+                        <div class="annment">
+                            <p class="ml-2" id="annt2">
+                                <script>
+                                    var today = new Date();
+                                    var dd = today.getDate();
+        
+                                    var mm = today.getMonth()+1; 
+                                    var yyyy = today.getFullYear();
+        
+                                    today = dd+'/'+mm+'/'+yyyy;
+                                    document.getElementById("annt2").innerHTML = today;
+                                </script>
+                            </p>
+
+                            <p class="justify-content border-bottom border-secondary p-1" >
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                            <!-- <img src="" alt=""> -->
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
 
             <!-- Main Content End -->
