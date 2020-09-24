@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Virtual Class Venture</title>
+  </head>
+  <body>
+    
+  <div class="container-fluid">
+    <!-- Header top start -->
+      <div class="row">
+        <div class=" col-md-12 mt-1">
+            <nav class="main_nav navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item ml-1">
+                          <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="joinclass.html">Join Class</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="enrolledclasses.html">Enrolled Classes</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="teaching.html">Teaching Classes</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="createclass.html">Create Class</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="login.html">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="contactus.html">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+
+            </nav>
+        </div>
+      </div>
+
+      <!-- End Header top -->
+
+      <!-- Content Start -->
+      <div class="row">
+        <div class="col-md-12 mt-1">
+                  <!-- End sidebarMenu Options -->
+            <div class="col-md-2 float-left">
+                    <!-- End sidebarMenu Options -->
+                    <ul class="siderbarMenu nav flex-column bg-dark">
+  
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" role="button" aria-expanded="false">Start Live Class</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="archivevideo.html" role="button" aria-expanded="false">Archive Video</a>
+                        </li>
+  
+                       <li class="nav-item">
+                         <a class="nav-link" href="createassignment.html" role="button" aria-expanded="false">Create Assignment</a>
+                       </li>
+  
+                     <li class="nav-item">
+                       <a class="nav-link" href="uploadfiles.html" role="button" aria-expanded="false">Upload Files</a>
+                     </li>
+  
+                     <li class="nav-item">
+                       <a class="nav-link" href="uploadvideofiles.html" role="button" aria-expanded="false">Upload Video Files</a>
+                     </li>
+  
+                     <li class="nav-item">
+                       <a class="nav-link" href="makeexam.html" role="button" aria-expanded="false">Make Exam</a>
+                     </li>
+  
+                     <li class="nav-item">
+                         <a class="nav-link" href="participatelist.html" role="button" aria-expanded="false">See Students</a>
+                     </li>
+  
+                     <li class="nav-item">
+                         <a class="nav-link" href="createannouncement.html" role="button" aria-expanded="false">Announcement</a>
+                     </li>
+                   </ul>  
+             </div>
+            <!-- End sidebarMenu Options -->
+
+            <!-- Main Content start -->
+
+            <div class="col-md-10 float-right">
+                    <div class="ml-1 p-2 annment border border-secondary bg-light" >
+                        <div class="annment p-1">
+                            <p class="ml-2 border-bottom border-secondary" id="annt1">
+                                <script>
+                                    var today = new Date();
+                                    var dd = today.getDate();
+        
+                                    var mm = today.getMonth()+1; 
+                                    var yyyy = today.getFullYear();
+        
+                                    today = dd+'/'+mm+'/'+yyyy;
+                                    document.getElementById("annt1").innerHTML = today;
+                                </script>
+                            </p>
+                            <h3>Create New Announcement</h3>
+                            <div class="border-bottom border-secondary p-1">
+                                <textarea class="form-control mb-2" id="#" rows="5" placeholder="Write Someting"></textarea>
+                                <button href="#" type="button" class="mb-1 btn btn-success btn-sm btn-block">Publish</button>
+                            </div>
+
+                         </div>
+                    </div>
+                    <div class="pubannouncement mt-1 ml-1 mb-2 p-2 border border-secondary bg-light">
+                        <h2 class="text-center border-bottom border-secondary p-1">Published Announcement</h2>
+                        <div class="pubannouncebody border-bottom border-secondary mb-2 p-2">
+                            <p>Date:- 01.01.20</p>
+                            <p class="justify-content">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+                                <button type="Edit" class="btn btn-warning" data-toggle="modal" data-target="#staticBackdrop">Edit</button>
+                                <button type="Delete" class="btn btn-danger">Delete</button>  
+                                
+                            
+                            <!-- Modal For Announcement Start-->
+                            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modelcreateannwidth modal-dialog modal-dialog-centered">
+                                <div class="modal-content bg-light">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Edit Announcement</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <textarea class="form-control txareamodalheight mb-2" id="#" rows="5" placeholder="Write Someting">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Save</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <!-- Modal For Announcement End-->
+
+
+                        </div>
+                    </div>
+            <!-- Main Content End -->
+            </div>
+      </div>
+      <!-- Content End -->
+      
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

@@ -60,7 +60,7 @@
       <div class="row">
         <div class="col-md-12 mt-1">
             <div class="col-md-2 float-left">
-
+                  <!-- End sidebarMenu Options -->
                 <ul class="siderbarMenu nav flex-column bg-dark">
 
                      <li class="nav-item">
@@ -93,6 +93,60 @@
                   </ul>  
             </div>
             <!-- End sidebarMenu Options -->
+
+              <!-- Main Content start -->
+
+            <div class="col-md-10 float-right">
+                <div class="createassment">
+                      <!-- Main Content Right Side Start-->
+                   <div class="col-md-12">
+                    <div class="col-md-8 uploadfiles_left float-left ml-2 border border-secondary p-3">  
+                        <p id="annt1">
+                            <script>
+                                var d = new Date();
+                                var day = d.getDay();
+                                var hr = d.getHours();
+                                var min = d.getMinutes();
+                                if (min < 10) {
+                                    min = "0" + min;
+                                }
+                                var ampm = "AM";
+                                if( hr > 12 ) {
+                                    hr -= 12;
+                                    ampm = "PM";
+                                }
+                                var date = d.getDate();
+                                var month = d.getMonth()+1;
+                                var year = d.getFullYear();
+                                var x = document.getElementById("time");
+                                document.getElementById("annt1").innerHTML = hr + ":" + min + ampm + " - " + date + "/" + month + "/" + year; 
+                            </script>
+                        </p> 
+
+                        <h3 class="border-bottom border-secondary p-1">Video Title</h3>
+                        <h4>File Name</h4>
+                        <input type="text" class="form-control" placeholder="">
+                        <div class="form-file float-left mt-1 mb-2">
+                            <input type="file" class="form-file-input" id="customFile">
+                                <label class="form-file-label" for="customFile">
+                                <span class="form-file-text">Choose file...</span>
+                                <span class="form-file-button">Browse</span>
+                                </label>
+                        </div>
+                        <button href="#" type="button" class="btn btn-primary btn-sm btn-block">Upload</button>
+                    </div>
+                    <!-- Main Content Left Side End -->
+
+                    <!-- Main Content Right Side Start -->
+                    <div class="uploadfiles_right col-md-4 float-right border-left border-secondary">
+
+                        <h3>Uploaded Videos</h3>
+                        
+                    </div>
+                    <!-- Main Content Left Side End -->
+                </div>
+
+            </div>      
         </div>
       </div>
       <!-- Content End -->
@@ -105,3 +159,4 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+
