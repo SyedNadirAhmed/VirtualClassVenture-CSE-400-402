@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCV</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="rtc.js"></script>
+    <script>
+        $(function () {
+            
+            Demo.init();
+        });
+    </script>
+</head>
+<body>
+    <section id="videoDesign">
+        <video autoplay muted controls id="videoCtr"></video>
+        <video autoplay muted controls id="remoteVideoCtr"></video>
+        <!-- <video autoplay muted controls id="videoCtrRec" width="100" height="100" style="display: none;"></video> -->
+    </section>
+    <section id="buttonDesign">
+        <button id="startConnection">Start Connection</button>
+
+        <button id="btnMuteUnmute">UnMute</button>
+        <button id="btnStartStopCam">Start Camera</button>
+        <button id="btnStartStopScreenshare">Screen Share</button>
+        <button id="btnStartReco">Start Recording</button>
+        <button id="btnPauseReco" style="display:none">Pause</button>
+        <button id="btnResumeReco" style="display:none">Resume</button>
+        <button id="btnStopReco" style="display:none">Stop</button>
+
+        <a href="" id="downloadRecording" style="display:none">Download</a>
+
+    </section>
+    
+</body>
+</html>

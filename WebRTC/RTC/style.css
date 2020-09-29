@@ -1,0 +1,23 @@
+body{
+    box-sizing: border-box;
+}
+
+#videoDesign{
+    padding: 10px;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+}
+
+video{
+    width: 500px;
+    height: 300px;
+}
+
+#buttonDesign{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
