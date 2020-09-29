@@ -30,19 +30,13 @@
                           <a class="nav-link" href="index.html">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="joinclass.html">Join Class</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="enrolledclasses.html">Enrolled Classes</a>
-                      </li>
-                      <li class="nav-item">
                         <a class="nav-link" href="teaching.html">Teaching Classes</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="createclass.html">Create Class</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="login.html">Profile</a>
+                          <a class="nav-link" href="teacherprofile.html">Profile</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="contactus.html">Contact Us</a>
@@ -66,25 +60,25 @@
                     <li class="nav-item">
                        <a class="nav-link" href="#" role="button" aria-expanded="false">Start Live Class</a>
                      </li>
+                      
+                     <li class="nav-item">
+                         <a class="nav-link" href="archivevideo.html" role="button" aria-expanded="false">Archive Video</a>
+                     </li>
 
                      <li class="nav-item">
                        <a class="nav-link" href="createassignment.html" role="button" aria-expanded="false">Create Assignment</a>
                      </li>
 
-                   <li class="nav-item">
-                     <a class="nav-link" href="uploadfiles.html" role="button" aria-expanded="false">Upload Files</a>
-                   </li>
-
-                   <li class="nav-item">
-                     <a class="nav-link" href="uploadvideofiles.html" role="button" aria-expanded="false">Upload Video Files</a>
-                   </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="resources.html" role="button" aria-expanded="false">Resources</a>
+                    </li>
 
                    <li class="nav-item">
                      <a class="nav-link" href="makeexam.html" role="button" aria-expanded="false">Make Exam</a>
                    </li>
 
                    <li class="nav-item">
-                       <a class="nav-link" href="participatelist.html" role="button" aria-expanded="false">See Students</a>
+                       <a class="nav-link" href="teachparticipatelist.html" role="button" aria-expanded="false">See Students</a>
                    </li>
 
                    <li class="nav-item">
@@ -97,7 +91,8 @@
               <!-- Main Content start -->
 
             <div class="col-md-10 float-right">
-                <div class="createassment">
+              <!-- Create New Assignment Start -->
+                <div class="createassment border border-secondary p-1 ml-1">
                       <!-- Main Content Right Side Start-->
                    <div class="col-md-12">
                     <div class="col-md-8 float-left pl-2">   
@@ -131,8 +126,85 @@
                     <!-- Main Content Left Side End -->
                     <button href="#" type="button" class="createassment_btn btn btn-primary btn-sm btn-block">Publish</button>
                 </div>
+            </div>    
+             <!-- Create New Assignment End -->
 
-            </div>      
+              <!-- Previous Assignment Start -->
+            <div class="previous_assignment border border-secondary p-1">
+              <!-- Previous Published Assignment Heading-->
+              <h2 class="text-center p-1 border-bottom border-secondary">Previous Published Assignment</h2>
+              <table class="table table-light text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">SL.</th>
+                    <th scope="col">Assignment Title</th>
+                    <th scope="col">Date & Time</th>
+                    <th scope="col">Due On</th>
+                    <th scope="col">See details</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Lorem ipsum dolor sit amet...</td>
+                    <td>01.01.20 - 9:10pm</td>
+                    <td>11.01.20 - 11:59pm</td>
+                    <td><a href="teacherassignmentdetails.html">See details</a></td>
+                    <td><button type="button" class="btn btn-danger">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Lorem ipsum dolor sit amet...</td>
+                    <td>05.01.20 - 11:10pm</td>
+                    <td>15.01.20 - 11:59pm</td>
+                    <td><a href="teacherassignmentdetails.html">See details</a></td>
+                    <td><button type="button" class="btn btn-danger">Delete</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Previous Assignment End -->
+
+              <!-- Submitted Assignment Start -->
+              <div class="submitted_assignment border border-secondary p-1">
+              <!-- Submitted Assignment Heading-->
+              <h2 class="text-center p-1 border-bottom border-secondary">Submitted Assignment</h2>
+              <table class="table table-light text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">SL.</th>
+                    <th scope="col">Assignment Title</th>
+                    <th scope="col">Submit Date & Time</th>
+                    <th scope="col">Due date</th>
+                    <th scope="col">Student Registration No.</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Lorem ipsum dolor sit amet...</td>
+                    <td>01.01.20 - 9:10pm</td>
+                    <td>11.01.20 - 11:59pm</td>
+                    <td>17010302000</td>
+                    <td>XYZ...</td>
+                    <td><a href="#">Download</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                     <td>Lorem ipsum dolor sit amet...</td>
+                    <td>01.01.20 - 9:10pm</td>
+                    <td>11.01.20 - 11:59pm</td>
+                    <td>17010302000</td>
+                    <td>XYZ...</td>
+                    <td><a href="#">Download</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Submitted Assignment End -->
         </div>
       </div>
       <!-- Content End -->

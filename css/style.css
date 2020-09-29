@@ -158,6 +158,36 @@ span.fpsw {
 
 /* Teacher Profile Setup Page End */
 
+/* Student Profile Page Start */
+.studentprofilebody{
+    width: 99.8%;
+    background: #00bf72;
+    box-shadow: 3px 3px 10px #000;
+}
+.studentprofilebody h2{
+    color: #F7F633;
+}
+.studentprofilebody label{
+    color: #F7F633;
+    font-size: 20px;
+}
+.studentokbtn{
+    width: 48%;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+}
+.studenteditbtn{
+    margin-left: 20px;
+    width: 48%;
+}
+
+/* Student Profile Page End */
+
+
+
+
+
 /* Index page start */
 .main_nav{
     background-color: #00496A;
@@ -275,6 +305,12 @@ span.fpsw {
     margin: 20px auto;
     width: 90%;
 }
+.previous_assignment{
+    margin: 10px 0 10px 3px;
+}
+.submitted_assignment{
+    margin: 10px 0 10px 3px;
+}
 /* Crate Assignment Page End */
 
 /* Uploaded Files Page Start */
@@ -322,3 +358,13 @@ span.fpsw {
     box-shadow: 1px 1px 1px #000;
 }
 /* Archive Video Page End */
+
+/* Resources Page Start */
+.uploadedfiles_filder{
+    width: 99.7%;
+    padding: 10px 0px 10px 30px;
+}
+.upfdate input[type=date] {
+    margin: 0px 0px;
+}
+/* Resources Page End*/
