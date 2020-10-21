@@ -185,6 +185,7 @@
                                 <th scope="col">Date & Time</th>
                                 <th scope="col">Download</th>
                                 <th scope="col">Edit</th>
+                                <th scope="col">Comments</th>
                                 <th scope="col">Delete</th>
                               </tr>
                             </thead>
@@ -195,6 +196,7 @@
                                 <td>01.01.20 - 9:10pm</td>
                                 <td><button type="button" class="btn btn-success">Download</button></td>
                                 <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#staticBackdrop">Edit</button></td>
+                                <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#staticBackdropLabel1">Comments(2)</button></td>
                                 <td><button type="button" class="btn btn-danger">Delete</button></td>
                               </tr>
                               <tr>
@@ -203,6 +205,7 @@
                                 <td>01.01.20 - 9:10pm</td>
                                 <td><button type="button" class="btn btn-success">Download</button></td>
                                 <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#staticBackdrop">Edit</button></td>
+                                <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#staticBackdropLabel1">Comments(2)</button></td>
                                 <td><button type="button" class="btn btn-danger">Delete</button></td>
                               </tr>
                               <tr>
@@ -215,6 +218,7 @@
                                 <td>01.01.20 - 9:10pm</td>
                                 <td><button type="button" class="btn btn-success">Download</button></td>
                                 <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#staticBackdrop">Edit</button></td>
+                                <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#staticBackdropLabel1">Comments(2)</button></td>
                                 <td><button type="button" class="btn btn-danger">Delete</button></td>
                               </tr>
                             </tbody>
@@ -250,6 +254,47 @@
                                 </div>
                             </div>
                             <!-- Modal For Edit File End-->
+
+
+                             <!-- Modal For Comments Start-->
+                             <div class="modal fade" id="staticBackdropLabel1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                              <div class="modelcreateannwidth modal-dialog modal-dialog-centered">
+                              <div class="modal-content bg-light">
+                                  <div class="modal-header">
+                                  <h5 class="modal-title" id="staticBackdropLabel">Comments</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                                  </div>
+                                  <div class="modal-body">
+                                     
+                                <!-- Comment Section Start -->
+                              <div class="border border-dark p-3 mb-2">
+                                <div>
+                                  <h6>Student Name</h6>
+                                  <p>This is a test message <span class="text-secondary px-1">Oct-20</span></p>
+                                </div>
+                                <div>
+                                  <h6>Teacher Reply</h6>
+                                  <p>This is a test message <span class="text-secondary px-1">Oct-20</span></p>
+                                </div>
+                                <div class="input-group mb-3">
+                                  <input type="text" class="form-control" style="margin:0;" placeholder="Comment" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                  <button class="btn btn-outline-success" type="button" id="button-addon2">Add Comment</button>
+                                </div>
+                              </div>
+
+                              <!-- Comment Section End -->
+                                  </div>
+                                  <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                          <!-- Modal For Comments End-->
+
+
 
                   </div>
                   <!-- Uploaded Files End -->
