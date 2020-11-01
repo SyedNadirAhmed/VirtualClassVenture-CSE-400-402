@@ -19,6 +19,5 @@ io.on('connection', (socket) => {
         //send message to others except caller
         console.log(data);
         socket.broadcast.emit('new_message1', data);
-    })
-    
+    }) 
 })

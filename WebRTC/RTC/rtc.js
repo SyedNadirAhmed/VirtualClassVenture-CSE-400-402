@@ -97,8 +97,6 @@ var Demo = (function(){
         });
 
 
-        // Screen share
-
 
 
         // Stat connection
@@ -115,11 +113,7 @@ var Demo = (function(){
     function setLocalVideo(isVideo){
         var curretn_Track;
 
-        if(isVideo){
-            if(screen_Track){
-                $("#btnStartStopScreenshare").trigger('click');
-            }
-
+        if(isVideo){ 
             if(video_Track){
                 localVideo.srcObject = new MediaStream([video_Track]);
                 curretn_Track = video_Track;
@@ -128,11 +122,6 @@ var Demo = (function(){
         else{
             if(video_Track){
                 $("#btnStartStopCam").trigger('click');
-            }
-
-            if(screen_Track){
-                localVideo.srcObject = new MediaStream([screen_Track]);
-                curretn_Track = screen_Track;
             }
         }
 
@@ -149,66 +138,6 @@ var Demo = (function(){
 
 
 
-    // Recored Stream
-    // function setupMediaRecorder(){
-    //     var stream = new MediaStream([audio_Track]);
-
-    //     if(video_Track && video_Track.readyState === "live"){
-    //         stream.addTrack(video_Track);
-    //     }
-
-    //     stream.getTracks().forEach(track => {
-    //         console.log(track);
-    //     })
-
-
-    //     _recordedTrack = [];
-    //     _mediaRecorder = new MediaRecorder(stream, {mimType: 'video/webm; codecs=vp8,opus'});
-    //     _mediaRecorder.ondataavailable = (e) => {
-    //         console.log(e.data.size);
-    //         if(e.data.size > 0)
-    //             _recordedTrack.push(e.data);
-    //     };
-
-    //     _mediaRecorder.onstart = async () => {
-    //         console.log('onstart');
-    //         $("#btnStartReco").hide();
-    //         $("#btnPauseReco").show();
-    //         $("#btnStopReco").show();
-    //         $("#downloadRecording").hide();
-    //     };
-    //     _mediaRecorder.onpause = async () => {
-    //         $("#btnPauseReco").hide();
-    //         $("#btnResumeReco").show();
-    //     };
-    //     _mediaRecorder.onresume = async () => {
-    //         $("#btnResumeReco").hide();
-    //         $("#btnPauseReco").show();
-    //         $("#btnStopReco").show();
-    //     };
-
-
-    //     // Recorder Stop
-    //     _mediaRecorder.onstop = async () => {
-    //         console.log('onstop');
-    //         var blob = new Blob(_recordedTrack, { type: 'video/webm' });
-    //         let url = window.URL.createObjectURL(blob);
-
-    //         var videoRecPlayer = document.getElementById('videoCtrRec');
-    //         videoRecPlayer.srcObject = null;
-    //         videoRecPlayer.load();
-    //         videoRecPlayer.src = url;
-    //         videoRecPlayer.play();
-    //         $(videoRecPlayer).show();
-
-    //         $("#downloadRecording").attr({ href: url, download: 'video.webm' }).show();
-
-    //         $("#btnStartReco").show();
-    //         $("#btnPauseReco").hide();
-    //         $("#btnStopReco").hide();
-    //     };
-
-    // }
 
     async function startWithAudio() {
         
@@ -240,7 +169,7 @@ var Demo = (function(){
         message = JSON.parse(message);
 
         if(message.rejected){
-            alert("other user rejected");
+            alert("Other user rejected");
         }
         else if(message.answer){
             console.log('answer', message.answer);
@@ -251,7 +180,7 @@ var Demo = (function(){
             var vcv = true;
 
             if(!audio_Track){
-                vcv = confirm('want to continue');
+                vcv = confirm('Want to continue?');
                 if(vcv){
                     await startWithAudio();
                     if(audio_Track){
@@ -286,6 +215,7 @@ var Demo = (function(){
     });
 
 
+      
     // Create Connection
     async function create_Connection(){
         console.log('create_Connection');
@@ -312,6 +242,7 @@ var Demo = (function(){
             //    console.log('connected')
             //}
         }
+
 
         // New remote media stream was added
         connection.ontrack = function(event){
@@ -343,16 +274,14 @@ var Demo = (function(){
             rtpSender = connection.addTrack(video_Track);
         }
 
-        if(screen_Track){
-            rtpSender = connection.addTrack(screen_Track);
-        }
-
         if(audio_Track){
             connection.addTrack(audio_Track, _remoteStream);
         }
         
     }
 
+
+    // Create Offer
     async function create_Offer(){
         var offer = await connection.createOffer();
         await connection.setLocalDescription(offer);
