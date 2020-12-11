@@ -97,6 +97,39 @@ var Demo = (function(){
         });
 
 
+        // Screen Share without camera showing
+        $("#btnStartStopScreenshare").on('click', async function(){
+
+            if(screen_Track){
+                screen_Track.stop();
+                screen_Track = null;
+                localVideo.srcObject = null;
+
+                if(rtpSender && connection){
+                    connection.removeTrack(rtpSender);
+                    rtpSender = null;
+                }
+                return;
+            }try{
+                var screen_Stream = await navigator.mediaDevices.getDisplayMedia({
+                    audio: false,
+                    video: {
+                        framerate: 1,
+                    },
+                });
+                if(screen_Stream && screen_Stream.getVideoTracks().length > 0){
+                    screen_Track = screen_Stream.getVideoTracks()[0];
+                    setLocalVideo(false);
+                    $(this).text("Stop Share");
+                }
+            }catch(e){
+                console.log(e);
+                return;
+            }
+
+        });
+
+
 
 
         // Stat connection
@@ -122,6 +155,11 @@ var Demo = (function(){
         else{
             if(video_Track){
                 $("#btnStartStopCam").trigger('click');
+            }
+
+            if(screen_Track){
+                localVideo.srcObject = new MediaStream([screen_Track]);
+                curretn_Track = screen_Track;
             }
         }
 

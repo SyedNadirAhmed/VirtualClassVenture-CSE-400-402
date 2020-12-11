@@ -4,8 +4,8 @@
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.https": {
       "enable": true,
-      "cert": "G:/WebRTC/https/localhost.pem",
-      "key": "G:/WebRTC/https/localhost.key",
+      "cert": "G:/VirtualClassVenture-CSE-400/WebRTC/https/localhost.pem",
+      "key": "G:/VirtualClassVenture-CSE-400/WebRTC/https/localhost.key",
       "passphrase": "12345"
     }
   }
