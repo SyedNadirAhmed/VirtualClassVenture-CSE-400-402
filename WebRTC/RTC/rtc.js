@@ -96,14 +96,13 @@ var Demo = (function(){
             }
         });
 
-
-        // Screen Share without camera showing
         $("#btnStartStopScreenshare").on('click', async function(){
 
             if(screen_Track){
                 screen_Track.stop();
                 screen_Track = null;
                 localVideo.srcObject = null;
+                $(this).text("Screen Share");
 
                 if(rtpSender && connection){
                     connection.removeTrack(rtpSender);
@@ -131,14 +130,12 @@ var Demo = (function(){
 
 
 
-
         // Stat connection
         $("#startConnection").on('click', async function(){
             await startWithAudio();
             await create_Connection();
             // await create_Offer();
         });
-
     }
 
 
@@ -147,11 +144,15 @@ var Demo = (function(){
         var curretn_Track;
 
         if(isVideo){ 
+            if (screen_Track) 
+                $("#btnStartStopScreenshare").trigger('click');
+        
             if(video_Track){
                 localVideo.srcObject = new MediaStream([video_Track]);
                 curretn_Track = video_Track;
             }
         }
+
         else{
             if(video_Track){
                 $("#btnStartStopCam").trigger('click');
@@ -174,6 +175,132 @@ var Demo = (function(){
     }
 
 
+    // Record live stream
+    function setupMediaRecorder(){
+        var _width = 0;
+        var _height = 0;
+
+        if(screen_Track){
+            _width = screen_Track.getSettings().width;
+            _height = screen_Track.getSettings().height;
+        }
+        else if(video_Track){
+            _width = video_Track.getSettings().width;
+            _height = video_Track.getSettings().height;
+        }
+
+        
+        // Merge camera with screen
+        var merger = new VideoStreamMerger({
+            width: _width,
+            height: _height,
+
+            audioContext: null,
+        });
+
+        if(screen_Track && screen_Track.readyState === "live"){
+            // Add the screen capture. Position it to fill the whole stream (the default)
+            merger.addStream(new MediaStream([screen_Track]),{
+                x: 0,
+                y: 0,
+                mute: true
+            });
+
+            if(video_Track && video_Track.readyState === "live"){
+                merger.addStream(new MediaStream([video_Track]),{
+                    x: 0,
+                    y: merger.height - 100,
+                    width: 100,
+                    height: 100,
+                    mute: true
+                });
+            }
+        }
+        else{
+            if(video_Track && video_Track.readyState === "live"){
+                // Add the webcam stream
+                merger.addStream(new MediaStream([video_Track]),{
+                    x: 0,
+                    y: 0,
+                    width: _width,
+                    height: _height,
+                    mute: true
+                });
+            }
+        }
+
+
+        if(audio_Track && audio_Track.readyState === "live"){
+            // Add the webcam stream. Position it on the bottom left and resize it to 100x100.
+            merger.addStream(new MediaStream([audio_Track]), {
+                mute: false
+            });
+        }
+
+        // Start the merging
+        merger.start();
+
+
+        // We now have a merged MediaStream
+        var stream = merger.result;
+        var videoRecPlayer = document.getElementById('videoCtrRec');
+        videoRecPlayer.srcObject = stream;
+        videoRecPlayer.load();
+        $(videoRecPlayer).show();
+
+        stream.getTracks().forEach(track =>{
+            console.log(track);
+        });
+
+        //Recorded Array
+        _recordedTrack = [];
+        _mediaRecorder = new MediaRecorder(stream, { mimeType: 'video/webm; codecs=vp8,opus' });
+        _mediaRecorder.ondataavailable = (e) => {
+            console.log(e.data.size);
+            if (e.data.size > 0)
+                _recordedTrack.push(e.data);
+        };
+        _mediaRecorder.onstart = async () => {
+            console.log('onstart');
+            $("#btnStartReco").hide();
+            $("#btnPauseReco").show();
+            $("#btnStopReco").show();
+            $("#downloadRecording").hide();
+        };
+        _mediaRecorder.onpause = async () => {
+            $("#btnPauseReco").hide();
+            $("#btnResumeReco").show();
+        };
+        _mediaRecorder.onresume = async () => {
+            $("#btnResumeReco").hide();
+            $("#btnPauseReco").show();
+            $("#btnStopReco").show();
+        };
+
+        _mediaRecorder.onstop = async () => {
+            console.log('onstop');
+            var blob = new Blob(_recordedTrack, { type: 'video/webm' });
+            let url = window.URL.createObjectURL(blob);
+
+
+            videoRecPlayer.srcObject = null;
+            videoRecPlayer.load();
+            videoRecPlayer.src = url;
+            videoRecPlayer.play();
+            $(videoRecPlayer).show();
+
+            $("#downloadRecording").attr({ href: url, download: 'video.mp4' }).show();
+
+            $("#btnStartReco").show();
+            $("#btnPauseReco").hide();
+            $("#btnStopReco").hide();
+            //var download = document.getElementById('downloadRecording');
+            //download.href = url;
+            //download.download = 'test.weba';
+            //download.style.display = 'block';
+        };
+
+    }
 
 
 
@@ -314,6 +441,10 @@ var Demo = (function(){
 
         if(audio_Track){
             connection.addTrack(audio_Track, _remoteStream);
+        }
+
+        if(screen_Track){
+            rtpSender = connection.addTrack(screen_Track);
         }
         
     }
