@@ -1,11 +1,11 @@
 {
     "liveServer.settings.port": 5501,
     "liveServer.settings.root": "/",
-    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.CustomBrowser": "Brave",
     "liveServer.settings.https": {
       "enable": true,
-      "cert": "G:/VirtualClassVenture-CSE-400/WebRTC/https/localhost.pem",
-      "key": "G:/VirtualClassVenture-CSE-400/WebRTC/https/localhost.key",
+      "cert": "C:/xampp/htdocs/VirtualClassVenture-CSE-400/WebRTC/https/localhost.pem",
+      "key": "C:/xampp/htdocs/VirtualClassVenture-CSE-400/WebRTC/https/localhost.key",
       "passphrase": "12345"
     }
   }
