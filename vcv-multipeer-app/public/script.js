@@ -33,6 +33,8 @@ navigator.mediaDevices.getUserMedia({
 //------------- Participate List ------------------// 
 const messageContainer = document.getElementById('message-container')
 
+const tmessageContainer = document.getElementById('textmessage-container')
+
 
 const name = prompt('What is your name?')
 appendMessage('You Joined: '+ name)
@@ -54,21 +56,43 @@ function appendMessage(message) {
 
 //---------------- Participate List End ----------------------//
 
+
+// -----------------------Chat-App----------------------------------- //
+const messageForm = document.getElementById('send-container')
+const messageInput = document.getElementById('message-input')
+tappendMessage('You Joined: '+ name)
+socket.emit('new-user', name)
+
+socket.on('chat-message', data => {
+  tappendMessage(`${data.name}: ${data.message}`)
+})
+
+socket.on('tnew-connected', name => {
+  tappendMessage(`${name} connected`)
+})
+
+socket.on('tnew-disconnected', name => {
+  tappendMessage(`${name} disconnected`)
+})
+
+messageForm.addEventListener('submit', e => {
+  e.preventDefault()
+  const message = messageInput.value
+  tappendMessage(`You: ${message}`)
+  socket.emit('send-chat-message', message)
+  messageInput.value = ''
+})
+
+function tappendMessage(message) {
+  const tmessageElement = document.createElement('div')
+  tmessageElement.innerText = message
+  tmessageContainer.append(tmessageElement)
+}
+
+// -------------------------Chat-App-End--------------------------------- //
+
   socket.on('user-connected', userId => {
     connectToNewUser(userId, stream)
-  })
-  // input value
-  let text = $("input");
-  // when press enter send message
-  $('html').keydown(function (e) {
-    if (e.which == 13 && text.val().length !== 0) {
-      socket.emit('message', text.val());
-      text.val('')
-    }
-  });
-  socket.on("createMessage", message => {
-    $("ul").append(`<li class="message"><b>user</b><br/>${message}</li>`);
-    scrollToBottom()
   })
 })
 

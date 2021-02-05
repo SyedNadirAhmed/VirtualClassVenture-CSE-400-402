@@ -53,9 +53,24 @@ io.on('connection', socket => {
   })
 })
 
-
-
 // ----Participate List End----//
+// -----------------------Chat-App----------------------------------- //
+
+io.on('connection', socket => {
+  socket.on('tnew-user', name => {
+    users[socket.id] = name
+    socket.broadcast.emit('tuser-connected', name)
+  })
+  socket.on('send-chat-message', message => {
+    socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] })
+  })
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('tnew-disconnected', users[socket.id])
+    delete users[socket.id]
+  })
+})
+
+// -----------------------Chat-App-End----------------------------------- //
 
 
 server.listen(process.env.PORT||3030, () => {

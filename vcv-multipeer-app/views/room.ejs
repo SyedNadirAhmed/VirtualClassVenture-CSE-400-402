@@ -74,7 +74,7 @@
                </div>
                <div class="main__controls__button">
                   <i class="fas fa-comment-alt"></i>
-                  <span>Chat</span>
+                  <span type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Chat</span>
                </div>
             </div>
             <div class="main__controls__block">
@@ -84,25 +84,36 @@
             </div>
          </div>
       </div>
-      <div class="main__right">
-         <div class="main__header">
-            <h6>Chat</h6>
-         </div>
-         <div class="main__chat_window">
-            <ul class="messages">
-               
-            </ul>
-
-         </div>
-         <div class="main__message_container">
-            <input id="chat_message" type="text" placeholder="Type message here...">
-         </div>
-      </div>
    </div>
 
-   
+
 <!-- ----------------------- -->
- <!-- Modal -->
+ <!-- Modal For Chat Start -->
+ <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="staticBackdropLabel">Chat</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+               <div class="p-2 bg-light text-center fw-bold my-2" id="textmessage-container"></div>
+               <form id="send-container">
+                  <input  class="col-md-10 d-block mx-auto" type="text" id="message-input">
+                  <div class="col-md-12 my-2">
+                     <button class="col-md-10 btn btn-sm btn-danger btn-block d-block mx-auto my-2" type="submit" id="send-button">Send</button>
+                  </div>
+               </form>
+        </div>
+       </div>
+     </div>
+   </div>
+ </div>
+<!-- Modal For Chat Start End -->
+
+<!-- ----------------------- -->
+
+<!-- Modal For Participate-List Start -->
  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
    <div class="modal-dialog">
      <div class="modal-content">
@@ -119,12 +130,8 @@
      </div>
    </div>
  </div>
-
-
-<!-- ------------------- -->
-
+<!-- Modal For Participate-List End -->
 
 </body>
 </html>
-
 

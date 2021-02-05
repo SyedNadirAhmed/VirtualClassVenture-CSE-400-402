@@ -1,30 +1,12 @@
-/* #video-grid{
-    display: flex;
-    justify-content: center;
-}
-
-video{
-    height: 200px;
-    width: 300px;
-    object-fit: cover;
-} */
-
-
-/* Cleavar Programmar */
-
 .main {
     height: 100vh;
     display: flex;
 }
 
 .main__left {
-    flex: 0.8;
+    flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-.main__right {
-    flex: 0.2
 }
 
 .main__videos {
@@ -38,11 +20,6 @@ video{
 
 .main__controls {
     background-color: #1C1E20;
-}
-
-.main__right {
-    background-color: #242324;
-    border-left: 1px solid #3D3D42;
 }
 
 .main__controls {
@@ -73,11 +50,6 @@ video{
 
 .main__controls__button i {
     font-size: 24px;
-}
-
-.main__right {
-    display: flex;
-    flex-direction: column;
 }
 
 .main__header {
