@@ -1,5 +1,5 @@
 {
-  "name": "GoogleMeet",
+  "name": "VirtualClassVenture",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Asif&Nadir",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
